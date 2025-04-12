@@ -11,50 +11,7 @@
     <div class="gif">
       <iframe src="https://tenor.com/embed/16227736917830720696" width="250" height="250" frameborder="0"></iframe>
     </div>
-    <h1>Hehehehe, I knew it! Love u babu 😘</h1>
-    <button id="openModal">Yaha tumhare liye kuch hai 💌</button>
-
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Enter Your Details</h2>
-        <form id="gfForm">
-          <input type="text" id="name" placeholder="Full Name" required />
-          <input type="number" id="age" placeholder="Your Age" required />
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
+    <h1>Hehehehe, I knew it! Love u babu 😘</h1>    
   </div>
-
-  <script>
-    const modal = document.getElementById("myModal");
-const btn = document.getElementById("openModal");
-const span = document.querySelector(".close");
-const form = document.getElementById("gfForm");
-
-btn.onclick = () => modal.style.display = "block";
-span.onclick = () => modal.style.display = "none";
-window.onclick = (event) => {
-  if (event.target === modal) modal.style.display = "none";
-};
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const name = document.getElementById("name").value.trim();
-  const age = document.getElementById("age").value.trim();
-
-  const isNikita = name.toLowerCase() === "nikita madule";
-
-  const params = new URLSearchParams({
-    name,
-    age,
-    isNikita: isNikita.toString()
-  });
-
-  window.location.href = `certificate.html?${params.toString()}`;
-});
-
-  </script>
 </body>
 </html>
